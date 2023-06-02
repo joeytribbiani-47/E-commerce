@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>
+        E-Commerce
+    </title>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#feature">Featured Products</a></li>
+            <li><a href="#products">Our Products</a></li>
+            <li><a href="#links">Quick Links</a></li>
+            <span class="user">
+                <a href="D:\Bonu Qabil\sun-09-11-e-commerce\loginpage.html">LogIn/SignUp Page</a>
+            </span>
+            <span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Font_Awesome_5_solid_shopping-cart.svg/1152px-Font_Awesome_5_solid_shopping-cart.svg.png" alt="" id="cartimage"> :
+            </span>
+            <span class="cart" onclick="checkOut()">0</span>
+        </ul>
+    </nav>
+
+    <!-- Slider -->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div id="feature">
+        <h2>Featured Products</h2>
+        <div class="featured-wraper">
+            <div id="shoes" class="featured-class">
+                <h3>Men's Sneakers</h3>
+                <img src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=400" class="feature-block w-100" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id perferendis doloremque velit consequatur
+                    accusantium? Est possimus ab ullam omnis ex, facilis assumenda quae dolorum neque odio quisquam
+                    vitae provident nisi.</p><button>See More</button>
+            </div>
+            <div id="watches" class="featured-class">
+                <h3>Men's Watch</h3>
+                <img src="https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=400" class="feature-block w-100" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id perferendis doloremque velit consequatur
+                    accusantium? Est possimus ab ullam omnis ex, facilis assumenda quae dolorum neque odio quisquam
+                    vitae provident nisi.</p><button>See More</button>
+            </div>
+            <div id="perfumes" class="featured-class">
+                <h3>Perfumes</h3>
+                <img src="https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="feature-block w-100" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id perferendis doloremque velit consequatur
+                    accusantium? Est possimus ab ullam omnis ex, facilis assumenda quae dolorum neque odio quisquam
+                    vitae provident nisi.</p><button>See More</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="Products">
+        <div class="products-class">
+            <h1>Our Products</h1>
+            <div id="cart-items">
+        <div class="product">
+          <h2>Sneakers</h2>
+          <img src="https://images.pexels.com/photos/1598508/pexels-photo-1598508.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+          <p>Leather shoes</p>
+          <p>Price: $150</p>
+          <button onclick="addToCart('Sneakers', 50)"> Add to Cart</button>
+        </div>
+        <div class="product">
+          <h2>Watch</h2>
+          <img src="https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=400" alt="">
+          <p>Silver Watch</p>
+          <p>Price: $70</p>
+          <button onclick="addToCart('Watch', 70)"> Add to Cart</button>
+        </div>
+        <div class="product">
+          <h2>Perfume</h2>
+          <img src="https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          <p>Long last Perfume </p>
+          <p>Price: $90</p>
+          <button onclick="addToCart('Perfume', 90)"> Add to Cart</button>
+        </div>
+        </div>
+        </div>
+        </div>
+
+    <div class="top-to-bottom">
+        Top
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+        
+    <!-- <div class="cart-button">
+        <a href="D:\Bonu Qabil\sun-09-11-e-commerce\cart.html">Add to Cart</a>
+    </div> -->
+
+    <div id="links">
+        <h2>Quick Links</h2>
+        <div class="links-wrapper">
+            <div class="links-class">
+                <ul>
+                    <li><a href="#perfumes">Perfumes</a></li>
+                    <li><a href="#watches">Watches</a></li>
+                    <li><a href="#shoes">Shoes</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="loginpage.js"></script>
+</body>
+
+</html>
