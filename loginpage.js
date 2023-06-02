@@ -16,12 +16,15 @@ document.getElementsByClassName("cart")[0].innerText = updatedCart
 function checkInput(){
         window.location.href= "cart.html";
 }
+function cart(){
+    window.location.href = "cart.html"
+}
 function checkOut() {
     if(isLoggedIn){
-        window.location.href= "cart.html"
+        window.location.href= "loginpage.html"
     }
     else{
-        window.location.href= "signup.html"
+        window.location.href= "loginpage.html"
     }
 }
 function showOrder(){
@@ -37,37 +40,37 @@ function showOrder(){
     console.log(cart);
     console.log("Total price :$"+ total);
 }
-const fProducts = [{productId:1, title: "JANAN", Description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat alias officiis distinctio quo dolor quae possimus. Et, ab sapiente. Quibusdam quas quia aspernatur! Dolorum voluptatibus possimus natus autem consequuntur necessitatibus.",Image: "https://www.junaidjamshed.com/media/catalog/product/j/a/janan_sport_1__1.jpg",isFeatured: true},
-{productId:2, title: "JANAN", Description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat alias officiis distinctio quo dolor quae possimus. Et, ab sapiente. Quibusdam quas quia aspernatur! Dolorum voluptatibus possimus natus autem consequuntur necessitatibus.",Image: "https://www.junaidjamshed.com/media/catalog/product/j/a/janan_sport_1__1.jpg",isFeatured: true}]
-for(let product of fProducts){
-    let mainDiv= document.createElement('div')
-    mainDiv.style.width= '40%'
-    mainDiv.style.backgroundColor= 'antiquewhite'
-    mainDiv.style.border='4px solid darkcyan'
-    mainDiv.style.display= 'inline-block'
-    let headingText= document.createTextNode(product.title)
-    let heading= document.createElement('h2')
-    heading.appendChild(headingText) 
-    mainDiv.appendChild(heading);
-    if(product.isFeatured){
-        let image= document.createElement('img')
-        image.setAttribute('src',product.Image)
-        image.style.width= '200px'
-        image.style.height= '200px'
-        image.style.alignItems= 'centre'
-        mainDiv.appendChild(image);
-    }
-    let DescriptionText= document.createTextNode(product.Description)
-    let description= document.createElement('p')
-    description.appendChild(DescriptionText)
-    mainDiv.appendChild(description);
-    let button= document.createElement('button')
-    let buttonText= document.createTextNode("See More")
-    button.appendChild(buttonText)
-    button.addEventListener("click",button);
-    mainDiv.appendChild(button);
-    let productDiv = document.createElement('div')
-    productDiv.style.width= '100%'
-    productDiv.appendChild(mainDiv)
-    feature.appendChild(productDiv)
-}
+// const fProducts = [{productId:1, title: "JANAN", Description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat alias officiis distinctio quo dolor quae possimus. Et, ab sapiente. Quibusdam quas quia aspernatur! Dolorum voluptatibus possimus natus autem consequuntur necessitatibus.",Image: "https://www.junaidjamshed.com/media/catalog/product/j/a/janan_sport_1__1.jpg",isFeatured: true},
+// {productId:2, title: "JANAN", Description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat alias officiis distinctio quo dolor quae possimus. Et, ab sapiente. Quibusdam quas quia aspernatur! Dolorum voluptatibus possimus natus autem consequuntur necessitatibus.",Image: "https://www.junaidjamshed.com/media/catalog/product/j/a/janan_sport_1__1.jpg",isFeatured: true}]
+// for(let product of fProducts){
+//     let mainDiv= document.createElement('div')
+//     mainDiv.style.width= '40%'
+//     mainDiv.style.backgroundColor= 'antiquewhite'
+//     mainDiv.style.border='4px solid darkcyan'
+//     mainDiv.style.display= 'inline-block'
+//     let headingText= document.createTextNode(product.title)
+//     let heading= document.createElement('h2')
+//     heading.appendChild(headingText) 
+//     mainDiv.appendChild(heading);
+//     if(product.isFeatured){
+//         let image= document.createElement('img')
+//         image.setAttribute('src',product.Image)
+//         image.style.width= '200px'
+//         image.style.height= '200px'
+//         image.style.alignItems= 'centre'
+//         mainDiv.appendChild(image);
+//     }
+//     let DescriptionText= document.createTextNode(product.Description)
+//     let description= document.createElement('p')
+//     description.appendChild(DescriptionText)
+//     mainDiv.appendChild(description);
+//     let button= document.createElement('button')
+//     let buttonText= document.createTextNode("See More")
+//     button.appendChild(buttonText)
+//     button.addEventListener("click",button);
+//     mainDiv.appendChild(button);
+//     let productDiv = document.createElement('div')
+//     productDiv.style.width= '100%'
+//     productDiv.appendChild(mainDiv)
+//     feature.appendChild(productDiv)
+// }
